@@ -1,0 +1,12 @@
+services:
+  joy-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    platform: linux/amd64
+    container_name: joy-env
+    volumes:
+      - .:/app
+    stdin_open: true  # -i
+    tty: true         # -t
+    working_dir: /app
